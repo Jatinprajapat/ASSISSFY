@@ -17,7 +17,7 @@ const vonage = new Vonage({
 const otpStore = new Map();
 
 // Read Aadhar DB
-const aadharDB = JSON.parse(fs.readFileSync('./aadharDB.json', 'utf8'));
+const aadharDB = JSON.parse(fs.readFileSync('./src/aadharDB.json', 'utf8'));
 
 // Generate 6-digit OTP
 function generateOTP() {

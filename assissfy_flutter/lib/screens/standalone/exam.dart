@@ -94,7 +94,7 @@ class _ExamScreenState extends State<ExamScreen> {
     setState(() => _isLoading = true);
     try {
       final response = await http.post(
-        Uri.parse('http://20.197.18.36:8000/api/send-otp'),
+        Uri.parse('http://localhost:8000/api/send-otp'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({'aadharNo': _aadharController.text}),
       );
@@ -120,7 +120,7 @@ class _ExamScreenState extends State<ExamScreen> {
     setState(() => _isLoading = true);
     try {
       final response = await http.post(
-        Uri.parse('http://20.197.18.36:8000/api/verify-otp'),
+        Uri.parse('http://localhost:8000/api/verify-otp'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({
           'aadharNo': _aadharController.text,
@@ -249,7 +249,7 @@ ${isCorrect ? '✓ Correct' : '✗ Incorrect'}
 
     try {
       final response = await http.post(
-        Uri.parse('http://20.197.18.36:8000/api/send-sms'),
+        Uri.parse('http://localhost:8000/api/send-sms'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({
           'phoneNo': _userData!['Phone no'],
@@ -412,7 +412,7 @@ Please contact support for further assistance.
 
     try {
       final response = await http.post(
-        Uri.parse('http://20.197.18.36:8000/api/send-sms'),
+        Uri.parse('http://localhost:8000/api/send-sms'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({
           'phoneNo': _userData!['Phone no'],

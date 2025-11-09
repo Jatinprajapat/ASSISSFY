@@ -3,7 +3,7 @@ import axios from 'axios';
 const signup = async (username, email, password) => {
 let language = 'en';
     try {
-      const response = await axios.post('http://20.197.18.36:5000/api/auth/signup', {
+      const response = await axios.post('http://localhost:5000/api/auth/signup', {
         username,
         email,
         password,

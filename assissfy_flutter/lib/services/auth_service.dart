@@ -9,7 +9,7 @@ import '../models/user.dart';
 class AuthService {
   // static const String baseUrl = 'http://localhost:5000/api';
 
-  static const String baseUrl = 'http://20.197.18.36:5000/api';
+  static const String baseUrl = 'http://localhost:5000/api';
   static const String tokenKey = 'auth_token';
   static const String languageKey = 'temp_language';
 
